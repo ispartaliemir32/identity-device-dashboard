@@ -33,8 +33,9 @@ describe('App', () => {
 
     await user.type(screen.getByRole('searchbox', { name: 'Search stale users' }), 'casey');
 
-    expect(screen.getByText('casey.kim@example.com')).toBeInTheDocument();
-    expect(screen.queryByText('jordan.lee@example.com')).not.toBeInTheDocument();
+    const staleUsers = screen.getByRole('region', { name: 'Stale users' });
+    expect(within(staleUsers).getByText('casey.kim@example.com')).toBeInTheDocument();
+    expect(within(staleUsers).queryByText('jordan.lee@example.com')).not.toBeInTheDocument();
   });
 
   it('shows an error when the demo report cannot be loaded', async () => {
