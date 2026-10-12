@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.vscode/
+.idea/
+
+# Real tenant reports must never be committed. Only the fictional sample in public/ is tracked.
+/report.json
+/reports/

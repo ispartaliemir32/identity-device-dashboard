@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-01T00:00:00Z",
+  "mode": "demo",
+  "staleDays": 90,
+  "summary": {
+    "users": {
+      "total": 12,
+      "enabled": 11,
+      "disabled": 1,
+      "stale": 5
+    },
+    "devices": {
+      "total": 10,
+      "nonCompliant": 5,
+      "byOs": {
+        "Android": 1,
+        "iOS": 2,
+        "macOS": 2,
+        "Windows": 5
+      }
+    },
+    "privilegedRoles": {
+      "assignments": 6,
+      "uniquePrincipals": 6
+    }
+  },
+  "staleUsers": [
+    {
+      "displayName": "Taylor Brooks",
+      "userPrincipalName": "taylor.brooks@example.com",
+      "lastSignInDate": null,
+      "daysSinceSignIn": null,
+      "neverSignedIn": true
+    },
+    {
+      "displayName": "Casey Kim",
+      "userPrincipalName": "casey.kim@example.com",
+      "lastSignInDate": "2026-01-20T16:30:00Z",
+      "daysSinceSignIn": 253,
+      "neverSignedIn": false
+    },
+    {
+      "displayName": "Jordan Lee",
+      "userPrincipalName": "jordan.lee@example.com",
+      "lastSignInDate": "2026-05-14T09:12:00Z",
+      "daysSinceSignIn": 139,
+      "neverSignedIn": false
+    },
+    {
+      "displayName": "Backup Service",
+      "userPrincipalName": "svc-backup@example.com",
+      "lastSignInDate": "2026-06-10T02:00:00Z",
+      "daysSinceSignIn": 112,
+      "neverSignedIn": false
+    },
+    {
+      "displayName": "Devon Park",
+      "userPrincipalName": "devon.park@example.com",
+      "lastSignInDate": "2026-07-01T08:15:00Z",
+      "daysSinceSignIn": 91,
+      "neverSignedIn": false
+    }
+  ],
+  "nonCompliantDevices": [
+    {
+      "deviceName": "AND-JAMIE",
+      "operatingSystem": "Android",
+      "osVersion": "14",
+      "complianceState": "inGracePeriod",
+      "userPrincipalName": "jamie.novak@example.com",
+      "lastSyncDate": "2026-09-27T11:11:00Z",
+      "daysSinceSync": 3
+    },
+    {
+      "deviceName": "IPH-DEVON",
+      "operatingSystem": "iOS",
+      "osVersion": "17.2",
+      "complianceState": "error",
+      "userPrincipalName": "devon.park@example.com",
+      "lastSyncDate": "2026-08-12T15:40:00Z",
+      "daysSinceSync": 49
+    },
+    {
+      "deviceName": "WIN-CASEY-03",
+      "operatingSystem": "Windows",
+      "osVersion": "10 22H2",
+      "complianceState": "noncompliant",
+      "userPrincipalName": "casey.kim@example.com",
+      "lastSyncDate": "2026-06-01T12:00:00Z",
+      "daysSinceSync": 121
+    },
+    {
+      "deviceName": "WIN-QUINN-05",
+      "operatingSystem": "Windows",
+      "osVersion": "11 23H2",
+      "complianceState": "noncompliant",
+      "userPrincipalName": "quinn.adams@example.com",
+      "lastSyncDate": "2026-09-26T10:30:00Z",
+      "daysSinceSync": 4
+    },
+    {
+      "deviceName": "WIN-SAM-02",
+      "operatingSystem": "Windows",
+      "osVersion": "11 23H2",
+      "complianceState": "noncompliant",
+      "userPrincipalName": "sam.rivera@example.com",
+      "lastSyncDate": "2026-09-29T09:10:00Z",
+      "daysSinceSync": 1
+    }
+  ],
+  "privilegedRoles": [
+    {
+      "roleName": "Global Administrator",
+      "principalName": "alex.morgan@example.com",
+      "principalType": "user"
+    },
+    {
+      "roleName": "Global Administrator",
+      "principalName": "break-glass-01@example.com",
+      "principalType": "user"
+    },
+    {
+      "roleName": "Intune Administrator",
+      "principalName": "jamie.novak@example.com",
+      "principalType": "user"
+    },
+    {
+      "roleName": "Privileged Role Administrator",
+      "principalName": "sam.rivera@example.com",
+      "principalType": "user"
+    },
+    {
+      "roleName": "Security Administrator",
+      "principalName": "riley.chen@example.com",
+      "principalType": "user"
+    },
+    {
+      "roleName": "Security Administrator",
+      "principalName": "SG-Security-Ops",
+      "principalType": "group"
+    }
+  ]
+}
