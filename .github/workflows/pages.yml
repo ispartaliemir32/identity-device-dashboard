@@ -31,7 +31,7 @@ jobs:
       - run: npm install --no-audit --no-fund
       - name: Test
         run: |
-          NO_COLOR=1 FORCE_COLOR=0 npx vitest run > vitest.out 2>&1; code=$?
+          code=0; NO_COLOR=1 FORCE_COLOR=0 npx vitest run > vitest.out 2>&1 || code=$?
           if [ $code -ne 0 ]; then python3 -c "import sys; t=open(sys.argv[1]).read()[:3500]; print('::error title='+sys.argv[2]+'::'+t.replace('%','%25').replace(chr(13),'').replace(chr(10),'%0A'))" vitest.out vitest; fi
           exit $code
 
