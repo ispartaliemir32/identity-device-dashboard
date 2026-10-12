@@ -31,9 +31,10 @@ jobs:
       - run: npm install --no-audit --no-fund
       - name: Test
         run: |
-          npx vitest run > vitest.out 2>&1; code=$?
-          if [ $code -ne 0 ]; then echo "::error title=vitest::$(sed 's/\x1b\[[0-9;]*m//g' vitest.out | grep -v '^\s*$' | head -c 3500 | sed ':a;N;$!ba;s/%/%25/g;s/\n/%0A/g')"; fi
+          NO_COLOR=1 FORCE_COLOR=0 npx vitest run > vitest.out 2>&1; code=$?
+          if [ $code -ne 0 ]; then python3 -c "import sys; t=open(sys.argv[1]).read()[:3500]; print('::error title='+sys.argv[2]+'::'+t.replace('%','%25').replace(chr(13),'').replace(chr(10),'%0A'))" vitest.out vitest; fi
           exit $code
+
       - run: npm run build
         env:
           BASE_PATH: /identity-device-dashboard/
